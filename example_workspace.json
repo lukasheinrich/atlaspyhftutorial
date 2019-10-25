@@ -1,0 +1,131 @@
+{
+    "channels": [
+        {
+            "name": "channel1",
+            "samples": [
+                {
+                    "data": [
+                        10.0,
+                        5.0
+                    ],
+                    "modifiers": [
+                        {
+                            "data": null,
+                            "name": "lumi",
+                            "type": "lumi"
+                        },
+                        {
+                            "data": {
+                                "hi": 1.05,
+                                "lo": 0.95
+                            },
+                            "name": "syst1",
+                            "type": "normsys"
+                        },
+                        {
+                            "data": null,
+                            "name": "SigXsecOverSM",
+                            "type": "normfactor"
+                        }
+                    ],
+                    "name": "signal"
+                },
+                {
+                    "data": [
+                        10.0,
+                        70.0
+                    ],
+                    "modifiers": [
+                        {
+                            "data": null,
+                            "name": "lumi",
+                            "type": "lumi"
+                        },
+                        {
+                            "data": {
+                                "hi": 1.05,
+                                "lo": 0.95
+                            },
+                            "name": "syst2",
+                            "type": "normsys"
+                        }
+                    ],
+                    "name": "background1"
+                },
+                {
+                    "data": [
+                        40.0,
+                        30.0
+                    ],
+                    "modifiers": [
+                        {
+                            "data": null,
+                            "name": "lumi",
+                            "type": "lumi"
+                        },
+                        {
+                            "data": [
+                                6.324555320336759,
+                                5.477225575051661
+                            ],
+                            "name": "staterror_channel1",
+                            "type": "staterror"
+                        },
+                        {
+                            "data": {
+                                "hi": 1.05,
+                                "lo": 0.95
+                            },
+                            "name": "syst3",
+                            "type": "normsys"
+                        }
+                    ],
+                    "name": "background2"
+                }
+            ]
+        }
+    ],
+    "measurements": [
+        {
+            "config": {
+                "parameters": [
+                    {
+                        "auxdata": [
+                            1.0
+                        ],
+                        "bounds": [
+                            [
+                                0.5,
+                                1.5
+                            ]
+                        ],
+                        "fixed": true,
+                        "inits": [
+                            1.0
+                        ],
+                        "name": "lumi",
+                        "sigmas": [
+                            0.1
+                        ]
+                    },
+                    {
+                        "fixed": true,
+                        "name": "alpha_syst1"
+                    }
+                ],
+                "poi": "SigXsecOverSM"
+            },
+            "name": "meas"
+        }
+    ],
+    "observations": [
+        {
+            "data": [
+                50.0,
+                100.0
+            ],
+            "name": "channel1"
+        }
+    ],
+    "version": "1.0.0"
+}
