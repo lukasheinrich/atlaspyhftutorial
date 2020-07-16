@@ -1,0 +1,9 @@
+pyhf[backends,xmlio]
+numpy
+shapely
+descartes
+matplotlib
+tqdm
+pandas
+joblib
+
