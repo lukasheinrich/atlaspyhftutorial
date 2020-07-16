@@ -4,4 +4,6 @@ shapely
 descartes
 matplotlib
 tqdm
+pandas
+joblib
 
