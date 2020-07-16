@@ -1,0 +1,4 @@
+pyhf[backends,xmlio]
+numpy
+
+
