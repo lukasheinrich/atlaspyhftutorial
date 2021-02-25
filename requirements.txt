@@ -1,5 +1,4 @@
 pyhf[backends,xmlio,contrib]~=0.6.0
-shapely
-descartes
-pandas
-joblib
+shapely~=1.7.1
+descartes~=1.1.0
+pandas~=1.1.0
