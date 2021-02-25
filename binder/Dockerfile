@@ -32,7 +32,8 @@ RUN python -m pip install --upgrade --no-cache-dir pip setuptools wheel && \
     python -m pip install --no-cache-dir \
        jupyter \
        metakernel \
-       zmq
+       zmq \
+       jupyterlab
 
 # Make sure the contents of the repo are in ${HOME}
 COPY . ${HOME}
