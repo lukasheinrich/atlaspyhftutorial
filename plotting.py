@@ -4,6 +4,7 @@ import glob
 import subprocess
 import shlex
 
+
 def make_harvest_from_result(result, masses):
     return {
         "CLs": result["CLs_obs"],
@@ -46,15 +47,16 @@ def make_harvest_from_result(result, masses):
         "upperLimitEstimatedError": -1,
         "xsec": -999007,
     }
-    
+
+
 def harvest_results(regions):
-    pattern = re.compile("sbottom_(\d+)_(\d+)_(\d+)")
+    pattern = re.compile(r"sbottom_(\d+)_(\d+)_(\d+)")
 
     dataList = []
     for region in regions:
         harvest = []
         files = "results/region{region}.result.sbottom_*_*_*.json".format(
-            region = region,
+            region=region,
         )
         for fname in glob.glob(files):
             result = json.load(open(fname))
@@ -64,10 +66,9 @@ def harvest_results(regions):
             if masses[2] != 60:
                 continue
             harvest.append(make_harvest_from_result(result, masses))
-        dataList.append(
-            ('region{}'.format(region),harvest)
-        )
+        dataList.append((f'region{region}', harvest))
     return dataList
+
 
 if __name__ == '__main__':
     main()
