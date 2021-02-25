@@ -1,9 +1,5 @@
-pyhf[backends,xmlio]
-numpy
+pyhf[backends,xmlio,contrib]~=0.6.0
 shapely
 descartes
-matplotlib
-tqdm
 pandas
 joblib
-
